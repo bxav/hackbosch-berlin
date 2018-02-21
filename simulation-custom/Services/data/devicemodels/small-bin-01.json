@@ -2,7 +2,7 @@
     "SchemaVersion": "1.0.0",
     "Id": "small-bin-01",
     "Version": "0.0.1",
-    "Name": "Truck",
+    "Name": "Small Bin",
     "Description": "Small Smart Bin",
     "Protocol": "MQTT",
     "Simulation": {
