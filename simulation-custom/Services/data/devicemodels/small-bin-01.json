@@ -1,0 +1,58 @@
+{
+    "SchemaVersion": "1.0.0",
+    "Id": "small-bin-01",
+    "Version": "0.0.1",
+    "Name": "Truck",
+    "Description": "Small Smart Bin",
+    "Protocol": "MQTT",
+    "Simulation": {
+        "InitialState": {
+            "online": true,
+            "lid": true,
+            "Latitude": 44.766726,
+            "Longitude": -0.916858,
+            "height": 30.0,
+            "height_unit": "Cm"
+        },
+        "Script": {
+            "Type": "javascript",
+            "Path": "small-bin-01-state.js",
+            "Interval": "00:00:05"
+        }
+    },
+    "Properties": {
+        "Type": "SmallBin",
+        "Location": "Field",
+        "Latitude": 44.766726,
+        "Longitude": -0.916858,
+        "Capacity": 100
+    },
+    "Telemetry": [
+        {
+            "Interval": "00:00:10",
+            "MessageTemplate": "{\"latitude\":${latitude},\"longitude\":${longitude},\"speed\": ${speed},\"speed_unit\":\"${speed_unit}\",\"cargotemperature\":${cargotemperature},\"cargotemperature_unit\":\"${cargotemperature_unit}\"}",
+            "MessageSchema": {
+                "Name": "small-bin-sensors;v1",
+                "Format": "JSON",
+                "Fields": {
+                    "lid": "boolean",
+                    "latitude": "double",
+                    "longitude": "double",
+                    "height": "double",
+                    "height_unit": "text",
+                    "cargotemperature": "double"
+                }
+            }
+        }
+    ],
+  "CloudToDeviceMethods": {
+      "CloseLid": {
+        "Type": "javascript",
+        "Path": "close-lid.js"
+      },
+      "OpenLid": {
+        "Type": "javascript",
+        "Path": "open-lid.js"
+      }
+  }
+}
