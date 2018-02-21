@@ -1,0 +1,32 @@
+// Copyright (c) Microsoft. All rights reserved.
+
+.maintenance-container {
+  color: #afb9c3;
+  height: 100%;
+
+  .selection-bar {
+    display: flex;
+    border-bottom: 1px solid;
+
+    .selection-item {
+      padding: 5px;
+      font-weight: bold;
+      font-size: 32px;
+      margin-right: 32px;
+
+      &:hover {
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+
+    .selection-item-active {
+      @extend .selection-item;
+      border-bottom: 10px solid #afb9c3;
+      color: #fff;
+    }
+  }
+
+  .grid-container { display: none; }
+
+}

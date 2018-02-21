@@ -1,0 +1,15 @@
+// Copyright (c) Microsoft. All rights reserved.
+
+.main-container {
+  height: 100%;
+  display: flex;  
+
+  .main-content-container {
+    display: flex;
+    flex-grow: 1;
+    height: 100%;
+    flex-direction: column;
+    background-color: #121416;
+    position: relative;
+  }
+}
