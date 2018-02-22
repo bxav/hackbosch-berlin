@@ -80,10 +80,7 @@
     <None Update="data\devicemodels\scripts\reboot-method.js">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="data\devicemodels\truck-01.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="data\devicemodels\truck-02.json">
+    <None Update="data\devicemodels\small-bin-01.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="data\devicemodels\scripts\chiller-01-state.js">

@@ -13,10 +13,8 @@ var state = {
     online: true,
     latitude: center_latitude,
     longitude: center_longitude,
-    speed: 80.0,
-    speed_unit: "mph",
-    cargotemperature: 38.0,
-    cargotemperature_unit: "F"
+    height: 80.0,
+    height_unit: "Cm"
 };
 
 /**
@@ -76,10 +74,7 @@ function main(context, previousState) {
     state.longitude = coords.longitude;
 
     // 30 +/- 5%,  Min 0, Max 80
-    state.speed = vary(30, 5, 0, 80);
-
-    // 38 +/- 1%,  Min 35, Max 50
-    state.cargotemperature = vary(38, 1, 35, 50);
+    state.height = vary(30, 5, 0, 80);
 
     return state;
 }

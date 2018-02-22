@@ -8,9 +8,8 @@
     "Simulation": {
         "InitialState": {
             "online": true,
-            "lid": true,
-            "Latitude": 44.766726,
-            "Longitude": -0.916858,
+            "latitude": 44.766726,
+            "longitude": -0.916858,
             "height": 30.0,
             "height_unit": "Cm"
         },
@@ -30,17 +29,15 @@
     "Telemetry": [
         {
             "Interval": "00:00:10",
-            "MessageTemplate": "{\"latitude\":${latitude},\"longitude\":${longitude},\"speed\": ${speed},\"speed_unit\":\"${speed_unit}\",\"cargotemperature\":${cargotemperature},\"cargotemperature_unit\":\"${cargotemperature_unit}\"}",
+            "MessageTemplate": "{\"latitude\":${latitude},\"longitude\":${longitude},\"height\": ${height},\"height_unit\":\"${height_unit}\"}",
             "MessageSchema": {
                 "Name": "small-bin-sensors;v1",
                 "Format": "JSON",
                 "Fields": {
-                    "lid": "boolean",
                     "latitude": "double",
                     "longitude": "double",
                     "height": "double",
-                    "height_unit": "text",
-                    "cargotemperature": "double"
+                    "height_unit": "text"
                 }
             }
         }
@@ -48,11 +45,11 @@
   "CloudToDeviceMethods": {
       "CloseLid": {
         "Type": "javascript",
-        "Path": "close-lid.js"
+        "Path": "TBD.js"
       },
       "OpenLid": {
         "Type": "javascript",
-        "Path": "open-lid.js"
+        "Path": "TBD.js"
       }
   }
 }
