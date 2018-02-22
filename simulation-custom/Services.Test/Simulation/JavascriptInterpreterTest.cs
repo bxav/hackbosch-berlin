@@ -41,7 +41,7 @@ namespace Services.Test.Simulation
         public void ReturnedStateIsIntact()
         {
             // Arrange
-            var filename = "chiller-01-state.js";
+            var filename = "small-bin-01-state.js";
             var context = new Dictionary<string, object>
             {
                 ["currentTime"] = DateTimeOffset.UtcNow.ToString("yyyy-MM-dd'T'HH:mm:sszzz"),
@@ -50,11 +50,8 @@ namespace Services.Test.Simulation
             };
             var state = new Dictionary<string, object>
             {
-                ["temperature"] = 50.5,
-                ["temperature_unit"] = "device-123",
-                ["humidity"] = 70.2,
-                ["humidity_unit"] = "%",
-                ["lights_on"] = false
+                ["height"] = 80,
+                ["height_unit"] = "%",
             };
 
             // Act
@@ -62,11 +59,8 @@ namespace Services.Test.Simulation
 
             // Assert
             Assert.Equal(state.Count, result.Count);
-            Assert.IsType<Double>(result["temperature"]);
-            Assert.IsType<string>(result["temperature_unit"]);
-            Assert.IsType<Double>(result["humidity"]);
-            Assert.IsType<string>(result["humidity_unit"]);
-            Assert.IsType<bool>(result["lights_on"]);
+            Assert.IsType<Double>(result["height"]);
+            Assert.IsType<string>(result["height_unit"]);
         }
 
         [Fact, Trait(Constants.TYPE, Constants.UNIT_TEST)]
@@ -75,14 +69,6 @@ namespace Services.Test.Simulation
             // Arrange
             var files = new List<string>
             {
-                "chiller-01-state.js",
-                "chiller-02-state.js",
-                "elevator-01-state.js",
-                "elevator-02-state.js",
-                "engine-01-state.js",
-                "engine-02-state.js",
-                "prototype-01-state.js",
-                "prototype-02-state.js",
                 "small-bin-01-state.js"
             };
             var context = new Dictionary<string, object>
