@@ -1,0 +1,43 @@
+﻿{
+  "Groups": [
+    {
+      "Id": "default_SmallBins",
+      "DisplayName": "Small Bin",
+      "Conditions": [
+        {
+          "Key": "properties.reported.Type",
+          "Operator": "EQ",
+          "Value": "SmallBin"
+        }
+      ]
+    },
+    {
+      "Id": "default_AllDevices",
+      "DisplayName": "All devices",
+      "Conditions": []
+    }
+  ],
+  "Rules": [
+    {
+      "Id": "default_Small_Bin_Capacity_High",
+      "Name": "Small Bin are nearly full",
+      "Enabled": true,
+      "Description": "Capacity > 90",
+      "GroupId": "default_SmallBins",
+      "Severity": "critical",
+      "Conditions": [
+        {
+          "Field": "height",
+          "Operator": "GreaterThan",
+          "Value": "80"
+        }
+      ]
+    }
+  ],
+  "DeviceModels": [
+    {
+      "Id": "small-bin-01",
+      "Count": 1
+    }
+  ]
+}

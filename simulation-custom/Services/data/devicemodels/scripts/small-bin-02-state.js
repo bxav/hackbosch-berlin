@@ -5,8 +5,8 @@
 
 "use strict";
 
-var center_latitude = 44.9066726;
-var center_longitude = -0.1016858;
+var center_latitude = 44.10066726;
+var center_longitude = -0.11016858;
 
 // Default state
 var state = {

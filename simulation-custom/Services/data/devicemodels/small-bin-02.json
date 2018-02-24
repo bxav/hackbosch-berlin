@@ -1,29 +1,29 @@
 {
     "SchemaVersion": "1.0.0",
-    "Id": "small-bin-01",
+    "Id": "small-bin-02",
     "Version": "0.0.1",
-    "Name": "Small Bin",
-    "Description": "Small Smart Bin",
+    "Name": "Small Bin Alone",
+    "Description": "Small Smart Bin Alone",
     "Protocol": "MQTT",
     "Simulation": {
         "InitialState": {
             "online": true,
-            "latitude": 44.766726,
-            "longitude": -0.916858,
+            "latitude": 44.866726,
+            "longitude": -0.986858,
             "height": 30.0,
             "height_unit": "Cm"
         },
         "Script": {
             "Type": "javascript",
-            "Path": "small-bin-01-state.js",
+            "Path": "small-bin-02-state.js",
             "Interval": "00:00:05"
         }
     },
     "Properties": {
         "Type": "SmallBin",
         "Location": "Field",
-        "Latitude": 44.66726,
-        "Longitude": -0.916858,
+        "Latitude": 44.96726,
+        "Longitude": -0.976858,
         "Capacity": 100
     },
     "Telemetry": [
